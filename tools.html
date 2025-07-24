@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mea Instrumenta-Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="orbitting_star.gif" alt="Logo" class="navbar-gif">
+        <span class="navbar-title">Mea Instrumenta</span>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+        </ul>
+    </nav>
+    <div class="tools-container">
+        <div class="tool-card">
+            <h2>Currency Converter</h2>
+            <p>Convert between major currencies instantly and accurately.</p>
+            <a href="currencies.html">Open Tool</a>
+        </div>
+        <div class="tool-card">
+            <h2>Text Encrypt/Decrypt</h2>
+            <p>Encrypt or decrypt your text using a simple key.</p>
+            <a href="encrypt.html">Open Tool</a>
+        </div>
+        <div class="tool-card">
+            <h2>Password Generator</h2>
+            <p>Generate strong random passwords up to 64 characters long.</p>
+            <a href="password.html">Open Tool</a>
+        </div>
+        <div class="tool-card">
+            <h2>Text Translation</h2>
+            <p>Translate text between languages from around the world.</p>
+            <a href="translate.html">Open Tool</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <span>Contact me:</span>
+            <a href="https://instagram.com/lrhx_20" target="_blank">Instagram</a> |
+            <a href="https://www.fiverr.com/users/elio_agera/seller_dashboard" target="_blank">Fiverr</a>
+        </div>
+    </footer>
+    <button id="goTopBtn" title="Go to top">&#8679;</button>
+    <script>
+        let lastScroll = 0;
+        const footer = document.querySelector('.footer');
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll) {
+                // Scrolling down
+                footer.style.transform = 'translateY(100%)';
+            } else {
+                // Scrolling up
+                footer.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="topbtn.js"></script>
+</body>
+</html>
